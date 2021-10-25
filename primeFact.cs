@@ -8,21 +8,32 @@ namespace Day5
     {
         static void Main(string[] args)
         {
-            int num, b;
-            Console.WriteLine("Please enter your number: ");
+            int a, b, num, isPrime;
+            Console.Write("Please enter your number: ");
             num = int.Parse(Console.ReadLine());
-            for (b = 1; b <= num; b++)
+            for (a = 2; a <= num; a++)
             {
-                if (num % b == 0)
+                if (num % a == 0)
                 {
-                    Console.WriteLine(b + " is a factor of " + num);
+                    isPrime = 1;
+                    for (b = 2; b <= a / 2; b++)
+                    {
+                        if (a % b == 0)
+                        {
+                            isPrime = 0;
+                            break;
+                        }
+                    }
+                    if (isPrime == 1)
+                    {
+                        Console.WriteLine(a);
+                    }
+
                 }
             }
-            Console.ReadLine();
 
 
 
         }
-
     }
 }

@@ -14,23 +14,31 @@ namespace Day5
 
             for(int i=0; i<=numberOfTimes; i++)
             {
-              double r=random.NextDouble();
-                Console.WriteLine("results : " + r);
+              double check=random.NextDouble();
+                Console.WriteLine("results : " +check);
 
-                if (r < 0.5)
+                if (check < 0.5)
                 {
                     Console.WriteLine("tail");
-                   /* double percentage = (r / r - numberOfTimes) * 100;
+                    check++;
+                   
+                   /* double percentage = (check / numberOfTimes) * 100;
                     Console.WriteLine("% : " + percentage);*/
                 }
                 else
                 {
                     Console.WriteLine("head");
+                    check++;
+
+
+
                 }
+                /* double percentage = (check / numberOfTimes) * 100;
+                 Console.WriteLine("% : " + percentage);*/
 
 
-            
-        }
+            }
+          
 
         }
     }

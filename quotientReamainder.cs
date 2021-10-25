@@ -13,7 +13,7 @@ namespace Day5
             Console.Write("enter divisor :");
             double divisor = Convert.ToDouble(Console.ReadLine());
 
-           /* int dividend = 50, divisor = 8;*/
+          
 
             double quotient = dividend / divisor;
             double remainder = dividend % divisor;
